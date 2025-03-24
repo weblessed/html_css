@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/* Vamos Criar nosso primeiro CSS */
+:root{
+--Tuca: #7423DC;
+--Spitzin: #EDCD69 ;
+--Puck: #BE5FFB  ;
+--titulofonte:Arial,sans-serif;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  /*serve para colorir o fundo de pagina usando o hexadecimal.
+    E podemos usar o background- imagem para colocar mais cores de paginas*/
+
+  background-color: #9f3ffa;
+
+  /* background-color: #000000;
+
+  background-color: #7423dc; */
+
+/*#7423DC #EDCD69 #BE5FFB  */
+
+  background-image: url("/alviverde\ -\ Copia.png");
+
+  background-position: top;
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  /* background-size: calc(80% 40%);*/
+
+
+  text-align:justify;
+
+  color: #ffffff;
+}
+
+header{
+/* inserir explicação aqui */
+
+width:100vw ;
+height: 15vh;
+background-color: var(--Puck);
+text-align: end;
+
+}
+menu,
+ul{
+width: 100vw;
+height: 40px;
+background-color:var(--Spitzin);
+text-align: center;
+color: #ffffff;
+
+
+}
+li{
+  list-style-type:none ;
+  display: inline-block
+}
+
+section{
+width: 100vw ;
+height: auto ;
+background-color:var(--Tuca);
+}
+
+footer{
+width: 100vw ;
+height: 15px ;
+background-color:var(--Puck) ;
+
+
+}
+button{
+  background-color: var(--Spitzin);
+  width: 8vw;
+  text-align: center;
+  border: solid var(--Puck);
+  border-radius: 0.5em;
+  /*padding:0.7em*/
+}
+
+a{
+  color: var(--Tuca);
+  text-decoration: none;
+}
+button:hover{
+  background-color: var(--Tuca);
+  border: #000000;
+  border-radius:0.5em;
+
+  color: var(--Puck);
+}
+
+p{
+color: #000000;
+font-size: 16px;
+background-color:var(--Spitzin);
+text-align:center;
+
+}
+
+a:link{
+color: cyan;
+background-color: deepskyblue;
+text-decoration: none;
+
+}
+a:visited{
+color: darkgray;
+background-color: tomato;
+text-decoration: none;
+}
+
+a:hover{
+color: darkblue;  
+background-color: lavender;
+text-decoration: underline;
+}
+
+#deyvin{
+  background-color: #2e5a80;
+}
+
+#Veiga_Pai_Dos_Gambas{
+  background-color: forestgreen;
+}
