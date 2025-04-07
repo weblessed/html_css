@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+:root {
+  --cor: #d80404;
+  --cor2: #ffd700;
+  --cor3: #212121;
+  --cor4: #b90a0a;
+  --cor5: #df600b;
+}
+
+/* não estou conseguindo deixar o fundo vom coloração igual e completa */
+/* para deixar a cor de fundo completa e igual,precisa ser verificada se tambem tem background-color no html */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  /* background-color: var(--cor2); */
+
+
+}
+
+body {
+
+  /* background-image: linear-gradient(to top, #d80404, #ffd700, #212121); */
+  background-image: linear-gradient(to top, var(--cor), var(--cor2), var(--cor3));
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+header {
+  margin-top: 3px;
+  border-radius: 7px 7px 0px 0px;
+  width: 80vw;
+  padding: 0.5px;
+  margin: auto;
+  background-color: var(--cor);
+  background-color: var(--cor2);
+  background-color: var(--cor3);
+}
+
+
+header>h1 {
+  color: var(--cor);
+  padding: 0.3px;
+  margin-top: 17px;
+  text-align: center;
+}
+
+#burguer {
+  background-color: var(--cor);
+  display: block;
+  color: var(--cor2);
+  text-align: center;
+  margin: auto;
+  padding: 7px;
+  width: 80vw;
+  cursor: pointer;
+}
+
+#burger:hover {
+  background-color: var(--cor3);
+}
+
+/* 
+O maior erro do desenvolvimento fica em parcial com o CSS, por que na estrutura HTML sempre é revisado*/
+
+
+menu {
+  color: var(--cor);
+  text-align: center;
+  width: 80vw;
+  margin: auto;
+  padding: 10px;
+  background-color: var(--cor5);
+  
+}
+
+menu>ul {
+  list-style-type: none;
+
+}
+
+menu>ul>li>a {
+  display: block;
+  padding: 7px;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--cor);
+  border-radius: 0px 0px 7px 7px;
+  color: var(--cor2);
+  margin: auto;
+
+}
+
+menu>ul>li>a:hover {
+  /* background-color: #d80404; */
+  background-color:var(--cor);
+  color: var(--cor2);
+  text-decoration: none;
+}
+
+
+section {
+  background-color: #d80404;
+  width: 80vw;
+  margin: auto;
+  border-radius: 7px 7px  7px 7px;
+  margin-top: 7px;
+  /* padding: 0.5px; */
+
+}
+a{
+  color: var(--cor4);
+  margin: auto;
+  display: block;
+  text-decoration: none;
+}
+a:hover{
+  background-color: var(--cor);
+  width: 80vw;
+  color: var(--cor2);
+  text-decoration: none;
+}
+
+
+article>h2 {
+  padding-bottom: 17px;
+
+}
+
+article>p {
+  text-align: justify;
+  margin-bottom: 17px;
+  text-indent: 17px;
+
+}
+
+
+footer {
+  color: var(--cor4);
+  text-align: center;
+  border-radius:  0px 0px 7px 7px;
+  width: 80vw;
+  padding: 15px;
+  margin: auto;
+  background-color: var(--cor3)
+}
+
+
+
+/* configuração e definição de imagens para mobile-first */
+
+
+img {
+  display: block;
+  margin: auto;
+}
+
+img#mobile {
+  display: block;
+}
+
+img#tablet {
+  display: none;
+}
+
+img#print {
+  display: none;
+}
+
+img#pc {
+  display: none;
+}
+
+img#tv {
+  display: none;
+}
+
+
+
+
+/* @mediacreris: */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    background-image: url("../back-tablet.jpg");
+
+  }
+
+  #burger {
+    display: none;
+  }
+
+
+  menu {
+    display: block;
+    width: 90vw;
+    margin: auto;
+    background-color:var(--cor);
+  }
+
+  menu>ul>li {
+    display: inline-block;
+    background-color: var(--cor2);
+
+  }
+
+  
+
+  article>h2 {
+    padding-bottom: 17px;
+    width: 90vw;
+    margin: auto;
+  }
+
+  article>p {
+    text-align: justify;
+    margin-bottom: 17px;
+    text-indent: 17px;
+  }
+
+  */ footer {
+    width: 90vw;
+    margin: auto;
+  }
+
+  img#mobile {
+    display: none;
+  }
+
+  img#tablet {
+    display: block;
+  }
+
+  img#print {
+    display: none;
+  }
+
+  img#pc {
+    display: none;
+  }
+
+  img#tv {
+    display: none;
+  }
+}
+
+
+
+
+/* Qual é a medida do computador*/
+@media screen and (min-widht:993px) and (max-width:1200px) {
+  body {
+    background-image: url("../back-pc\ \(1\).jpg");
+  }
+
+  footer {
+    width: 90vw;
+    margin: auto;
+  }
+
+  img#mobile {
+    display: none;
+  }
+
+  img#tablet {
+    display: none;
+  }
+
+  img#print {
+    display: none;
+  }
+
+  img#pc {
+    display: block;
+  }
+
+  img#tv {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 1201px) {
+
+  /* Precisa os menus da tela maior  */
+  body {
+    background-image: url("../back-tv.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+  }
+
+  #burger {
+    display: none;
+  }
+
+  menu {
+    display: block;
+    background-color: var(--cor);
+  }
+
+  menu>ul>li {
+    display: inline-block;
+    background-color: #21203f;
+  }
+
+  /* Trocar o main por section */
+
+
+  article>h2 {
+    padding-bottom: 17px;
+  }
+
+  article>p {
+    text-align: justify;
+    margin-bottom: 17px;
+    text-indent: 17px;
+  }
+
+  /* Mudado o tamanho do footer para tela maior */
+
+  footer {
+    width: 80vw;
+    margin: auto;
+  }
+
+  img#mobile {
+    display: none;
+  }
+
+  img#tablet {
+    display: none;
+  }
+
+  img#print {
+    display: none;
+  }
+
+  img#pc {
+    display: none;
+  }
+
+  img#tv {
+    display: block;
+  }
+
+}
